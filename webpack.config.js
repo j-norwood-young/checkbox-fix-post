@@ -4,7 +4,7 @@ module.exports = {
     "entry": "./src/index.js",
     "output": {
         "path": __dirname + '/dist',
-        "filename": "bundle.js"
+        "filename": "checkbox-fix-post.bundle.js"
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist')

@@ -40,9 +40,11 @@ It uses vanilla Javascript and does not rely on external libraries.
 You can pass the following options when calling `checkboxfixpost()`:
 
 _selector_
+
 A selector for a form or forms you want to target. Defaults to `form`. Eg. `#myForm`.
 
 _checkbox_selector_
+
 A selector for the checkboxes you wish to target. Defaults to all checkboxes with `input[type="checkbox"]`.
 
 ## Specifying values
@@ -50,4 +52,20 @@ A selector for the checkboxes you wish to target. Defaults to all checkboxes wit
 A value of 0 will always be returned if the checkbox is selected, unless you set the property `inverse-value` on the checkbox, in which case that value will be sent. 
 ```html
 <input type="checkbox" name="checkbox-inverse" id="checkbox-inverse" value="Blah" inverse-value="Yack">
+```
+
+## Using as a library
+
+You can use this as a library by simply requiring it.
+
+```
+npm i --save checkbox-fix-post
+```
+
+```javascript
+const CheckboxFixPost = require("checkbox-fix-post");
+const checkbox_fix_post = new CheckboxFixPost({
+    selector: `form`,   // Default
+    checkbox_selector: `input[type="checkbox"]` // Default
+});
 ```

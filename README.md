@@ -7,7 +7,7 @@ It uses vanilla Javascript and does not rely on external libraries.
 ## Usage
 
 ```html
-<script src="./bundle.js"></script>
+<script src="./checkbox-fix-post.bundle.js"></script>
 <script>
     checkboxfixpost();
 </script>

@@ -1,6 +1,6 @@
 {
   "name": "checkbox-fix-post",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fixes form checkboxes so that when you POST it actually posts a value",
   "main": "src/checkbox-fix-post.js",
   "scripts": {

@@ -13,12 +13,12 @@ It uses vanilla Javascript and does not rely on external libraries.
 </script>
 <form action="" method="get">
     <label for="checkbox1">
-        <input type="checkbox" name="checkbox1" id="checkbox1" value="1">
+        <input type="checkbox" name="checkbox1" value="1">
         Checkbox 1
     </label>
     <br>
     <label for="checkbox1">
-        <input type="checkbox" name="checkbox2" id="checkbox2" value="1">
+        <input type="checkbox" name="checkbox2" value="1">
         Checkbox 2
     </label>
     <br>
@@ -27,7 +27,7 @@ It uses vanilla Javascript and does not rely on external libraries.
 <hr>
 <form action="" method="get">
     <label for="checkbox3">
-        <input type="checkbox" name="checkbox-inverse" id="checkbox-inverse" value="Blah" inverse-value="Yack">
+        <input type="checkbox" name="checkbox-inverse" value="Blah" inverse-value="Yack">
         Checkbox with Inverse
     </label>
     <br>
@@ -51,7 +51,7 @@ A selector for the checkboxes you wish to target. Defaults to all checkboxes wit
 
 A value of 0 will always be returned if the checkbox is selected, unless you set the property `inverse-value` on the checkbox, in which case that value will be sent. 
 ```html
-<input type="checkbox" name="checkbox-inverse" id="checkbox-inverse" value="Blah" inverse-value="Yack">
+<input type="checkbox" name="checkbox-inverse" value="Blah" inverse-value="Yack">
 ```
 
 ## Using as a library

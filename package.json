@@ -12,6 +12,7 @@
     "checkbox",
     "forms"
   ],
+  "repository": "github:j-norwood-young/checkbox-fix-post",
   "author": "Jason Norwood-Young <jason@10layer.com>",
   "license": "MIT",
   "devDependencies": {

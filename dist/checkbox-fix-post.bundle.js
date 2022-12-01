@@ -148,19 +148,19 @@ var CheckboxFixPost = /*#__PURE__*/function () {
       var data = e.formData;
       var checkboxes = e.currentTarget.querySelectorAll(this.opts.checkbox_selector);
       Array.from(checkboxes).forEach(function (checkbox) {
+        var inverse_val = checkbox.getAttribute("inverse-value");
+        if (!inverse_val) return;
         var name = checkbox.getAttribute("name");
         if (!name) return;
         var checked = checkbox.checked;
         if (checked) return;
-        var val = checkbox.getAttribute("inverse-value");
-        val = val || 0;
+        var val = inverse_val || 0;
         data.set(name, val);
       });
     }
   }, {
     key: "setupForm",
     value: function setupForm(form) {
-      var self = this;
       form.addEventListener("formdata", this.onSubmit.bind(this));
     }
   }, {

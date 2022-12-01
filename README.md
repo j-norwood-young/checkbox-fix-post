@@ -1,6 +1,6 @@
 # Checkbox Fix Post
 
-This library fixes checkboxes so that they submit a value on a form submit, even if they are not selected.
+This library fixes checkboxes so that they submit a value on a form submit, even if they are not selected, by adding an "inverse-value" attribute to your checkbox.
 
 It uses vanilla Javascript and does not rely on external libraries.
 
@@ -13,12 +13,12 @@ It uses vanilla Javascript and does not rely on external libraries.
 </script>
 <form action="" method="get">
     <label for="checkbox1">
-        <input type="checkbox" name="checkbox1" value="1">
+        <input type="checkbox" name="checkbox1" value="1" inverse-value="0">
         Checkbox 1
     </label>
     <br>
     <label for="checkbox1">
-        <input type="checkbox" name="checkbox2" value="1">
+        <input type="checkbox" name="checkbox2" value="1" inverse-value="0">
         Checkbox 2
     </label>
     <br>
@@ -49,10 +49,12 @@ A selector for the checkboxes you wish to target. Defaults to all checkboxes wit
 
 ## Specifying values
 
-A value of 0 will always be returned if the checkbox is selected, unless you set the property `inverse-value` on the checkbox, in which case that value will be sent. 
+Set `inverse-value` as an attribute on the checkbox input. If the checkbox is checked, the value will be the value of the checkbox. If the checkbox is not checked, the value will be the value of `inverse-value`.
 ```html
 <input type="checkbox" name="checkbox-inverse" value="Blah" inverse-value="Yack">
 ```
+***NOTE - Breaking Change*** 
+Pre-version 1.0.0, a value of 0 will always be returned if the checkbox is selected, unless you set the property `inverse-value` on the checkbox, in which case that value will be sent. Post v1.0.0, unless `inverse-value` is set, the checkbox will act as a normal checkbox. If you want to send a value of 0, you must set `inverse-value` to 0.
 
 ## Using as a library
 
